@@ -28,7 +28,21 @@ git clone https://github.com/settings/keys
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+- выполнили три команды которые он просит
 - и установили питон
 ```bash
 brew install python
 ```
+- добавили новый интерпретатор в Visual code через путь к папке с ним
+
+## Решили задачку с leet code
+- написали функцию
+- сохранили все на github
+```bash
+git status
+git add
+git commit -m
+git push
+```
+# Lesson 2
+

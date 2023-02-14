@@ -5,3 +5,6 @@ class Solution:
 a = Solution()
 result = a.sum(1,2)
 print (result)
+
+string='fdsf'
+print(type(string))
