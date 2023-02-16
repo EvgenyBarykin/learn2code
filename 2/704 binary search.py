@@ -1,20 +1,20 @@
-#variant 1
+# variant 1
 '''class Solution(object):
     def search(self, nums: list[int], target: int) -> int:
         if target in nums:
             return (nums.index(target))
-        else: 
+        else:
             return -1
-
+'''
 nums = [5]
 target = 5
 
 
-Sol=Solution()
+'''Sol=Solution()
 result=Sol.search(nums,target)
 print(result)'''
 
-#variant 2
+# variant 2
 '''class Solution(object):
     def search(self, nums, target):
         index = -1
@@ -28,12 +28,14 @@ Sol=Solution()
 result=Sol.search(nums,target)
 print(result)'''
 
-#variant 3
+# variant 3
+
+
 class Solution(object):
     def search(self, nums, target):
         left = 0
         right = len(nums)-1
-        while (right>=left):
+        while (right >= left):
             center_idx = left + (right-left)//2
             if nums[center_idx] == target:
                 return center_idx
@@ -41,10 +43,10 @@ class Solution(object):
                 left = center_idx + 1
             else:
                 right = center_idx - 1
-#if nothing was found
-       return -1
-         
+# if nothing was found
+        return -1
 
-Sol=Solution()
-result=Sol.search(nums,target)
+
+Sol = Solution()
+result = Sol.search(nums, target)
 print(result)
