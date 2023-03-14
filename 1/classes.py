@@ -34,7 +34,8 @@ class Int:
     def get_value(self):
         return self.value
     
-    # __repr__ возвращает отображение объека в виде строки
+    # __repr__ возвращает отображение объекта в виде строки
+    # когда мы его печатаем
     def __repr__(self) -> str:
         return str(self.value)
 
