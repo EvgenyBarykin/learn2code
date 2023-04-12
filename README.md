@@ -176,3 +176,45 @@ raise Exception
 
 - почитать про yield
 - посмотреть https://docs.python.org/3/reference/datamodel.html
+
+# Various installation and venv
+
+- to create venv: 
+```
+python3 venv /path/to/venv/folder
+```
+- to use in VS: open the folder containing venv
+- to activate venv in zsh: 
+```
+source path/to/venv/folder/bin/activate
+```
+- check all installed packages: 
+``` 
+pip freeze
+```
+
+# Lesson 8
+## декораторы
+
+- позволяют модифицировать поведение функции
+- можно задать следующим образом:
+```
+def hello_decorator(func):
+    def inner1():
+        print('Hello, this is before function execution')
+        func()
+        print('This is after function execution')
+    return inner1
+```
+ Тогда вызов функции hello_decorator() будет возвращать объект функции, который при вызове будет 
+ выполнять и inner1, и func()
+
+ - это называется "паттерн декоратор"
+
+ - Альтернативно, можно определить декоратор, а потом задать функцию:
+ ```
+@hello_decorator
+def inside_function():
+        print('this is inside function')
+    ```
+Теперь вызов функции inside_function() будет вызывать функцию с декоратором
